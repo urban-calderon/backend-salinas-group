@@ -1,18 +1,19 @@
-import { envs } from './config/envs';
-import { Server } from './presentation/server';
+import express from 'express';
+import bodyParser from 'body-parser';
+import { errorMiddleware } from './middlerwares/error.middleware';
+import encryptionRoutes from './routes/encryption.routes';
 
-(async()=> {
-    main();
-})();
+export const createApp = () => {
+  const app = express();
 
+  // Middlewares
+  app.use(bodyParser.json());
 
-function main() {
-    const server = new Server({
-        port: envs.PORT,
-    });
-    
-    server.start();
-}
+  // Routes
+  app.use('/api', encryptionRoutes);
 
-    
-    
+  // Error handling
+  app.use(errorMiddleware);
+
+  return app;
+};
