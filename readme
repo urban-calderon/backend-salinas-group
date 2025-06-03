@@ -1,0 +1,32 @@
+# **Backend Service** 🏗️  
+🔹 API en Node.js + Express + TypeScript para servicio de encriptado basado en el algoritmo “RSA/ECB/PKCS1Padding encoding UTF-8”, devuelve una cadena encriptada de tipo string.
+
+## **🛠️ Tecnologías**  
+- **Node.js** (v18+)  
+- **Express** (Framework)  
+
+## **⚙️ Requisitos previos**  
+- **Node.js** (v18+)  
+- **npm** 
+
+## **⚡ Configuración Rápida**  
+1. Clonar repositorio:  
+   ```bash
+   git clone https://github.com/urban-calderon/backend-salinas-group.git
+   cd backend-salinas-group
+
+2. Instalar dependencias:  
+   ```bash
+   npm install
+
+3. Ejecutar:  
+   ```bash
+   npm run dev
+
+## **📡 Endpoints**  
+### Endpoint URL
+- **POST** /api/encrypt 
+```bash
+   {
+        text: "Soy un texto"
+   }
