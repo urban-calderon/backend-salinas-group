@@ -15,11 +15,22 @@
    git clone https://github.com/urban-calderon/backend-salinas-group.git
    cd backend-salinas-group
 
-2. Instalar dependencias:  
+2. Configurar las variables de entorno:  
+- Crear en la raíz del proyecto el archivo .env
+- Agregar las siguientes variables:
+   ```bash
+   NODE_ENV=development     
+   PORT=3000                 
+   RSA_KEY_SIZE=2048      
+   RSA_PUBLIC_KEY_PATH=./keys/public.pem
+   RSA_PRIVATE_KEY_PATH=./keys/private.pem
+   KEY_STORAGE_DIR=./keys 
+
+3. Instalar dependencias:  
    ```bash
    npm install
 
-3. Ejecutar:  
+4. Ejecutar:  
    ```bash
    npm run dev
 
